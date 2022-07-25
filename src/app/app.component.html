@@ -1,0 +1,50 @@
+<mat-toolbar class="mat-elevation-z8">
+  <button
+    mat-icon-button
+    *ngIf="sidenav.mode === 'over'"
+    (click)="sidenav.toggle()"
+  >
+    <mat-icon *ngIf="!sidenav.opened"> menu </mat-icon>
+    <mat-icon *ngIf="sidenav.opened"> close </mat-icon>
+  </button>
+  Jorge Ayala Sáenz
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
+    <img
+      class="avatar mat-elevation-z8"
+      src="/assets/photo1.png"
+    />
+
+    <a mat-button 
+    href="https://www.linkedin.com/in/ayala-saenz-jorge-santiago/" 
+    target="_blank">@ayalasaenzjorge</a> 
+    <h5 class="designation">Desarrollador de software</h5>
+
+    <mat-divider></mat-divider>
+
+    <button mat-button class="menu-button" routerLink="/home">
+      <mat-icon>info</mat-icon>
+      <span>Sobre mí</span>
+    </button>
+    <button mat-button class="menu-button" routerLink="/profile">
+      <mat-icon>school</mat-icon>
+      <span>Educación</span>
+    </button>
+    <button mat-button class="menu-button" routerLink="/about">
+      <mat-icon><span class="material-symbols-rounded">
+        business_center
+        </span></mat-icon>
+      <span>Experiencia</span>
+    </button>
+
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="content mat-elevation-z8">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+
