@@ -7,6 +7,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import {MatCardModule} from '@angular/material/card';
+import {MatExpansionModule} from '@angular/material/expansion';
+
 
 @NgModule({
   declarations: [],
@@ -17,7 +19,8 @@ import {MatCardModule} from '@angular/material/card';
     MatButtonModule,
     MatIconModule,
     MatDividerModule,
-    MatCardModule
+    MatCardModule,
+    MatExpansionModule
   ],
   exports: [
     CommonModule,
@@ -26,7 +29,8 @@ import {MatCardModule} from '@angular/material/card';
     MatButtonModule,
     MatIconModule,
     MatDividerModule,
-    MatCardModule
+    MatCardModule,
+    MatExpansionModule
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
